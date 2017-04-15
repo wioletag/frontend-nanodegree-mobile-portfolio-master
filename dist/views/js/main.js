@@ -492,7 +492,7 @@ function updatePositions() {
   //  Optimizations:
   //  Stored items.length in l variable
   //  Moved document.body.scrollTop/ 1250 out of the foor loop and stored in top variable
-  //  Move phase calculation out of the for loop to calculate here and store in array to be used in the for loop
+  //  Moved phase calculation out of the for loop to calculate here and store in array to be used in the for loop
   var l = items.length;
   var top = document.body.scrollTop/ 1250;
   var phases = [];
@@ -527,7 +527,7 @@ window.addEventListener('scroll', function() {
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  // Optimization- reduced number from 250 to 30
+  // Optimization- reduced number from 200 to 30
   for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
