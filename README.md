@@ -50,7 +50,7 @@ To make views/pizza.html render with a consistent frame-rate at 60fps when scrol
     After:
     ```
     window.addEventListener('scroll', function() {
-	window.requestAnimationFrame(updatePositions);
+       window.requestAnimationFrame(updatePositions);
     });
     ```
 
