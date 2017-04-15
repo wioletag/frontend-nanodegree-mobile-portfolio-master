@@ -1,0 +1,8 @@
+{
+  "name": "website-optimization",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-minify-html": "^2.1.0"
+  }
+}
