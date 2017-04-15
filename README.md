@@ -2,24 +2,22 @@
 
 The goal of this project is to optimize this online portfolio for speed.
 
-### To run this project:
-
 
 ### Optimizations: 
 #### Part 1 of the project: Optimize PageSpeed Insights score for index.html
 
 To achieve a PageSpeed score of at least 90 for Mobile and Desktop, following chages were made:
-- Minified and inlined style.css in index.html
-- Added media="print" attribute to print.css in index.html
+-   Minified and inlined style.css in index.html
+-   Added media="print" attribute to print.css in index.html
     ```
     <link href="css/print.css" rel="stylesheet" media="print">
     ```
-- Added async attribute to analytics.js
+-   Added async attribute to analytics.js
     ```
     <script src="http://www.google-analytics.com/analytics.js" async></script>
     ```
-- Optimized profilepic.jpg using ImageOptim
-- Copied pizzeria.jpg from view/images, resized it to width 100 and put it img directory. Updated index.html to use this small image.
+-   Optimized profilepic.jpg using ImageOptim
+-   Copied pizzeria.jpg from view/images, resized it to width 100 and put it img directory. Updated index.html to use this small image.
     ```
     <img src="img/pizzeria.jpg">
     ```
@@ -29,12 +27,14 @@ To achieve a PageSpeed score of at least 90 for Mobile and Desktop, following ch
 #### Part 2  of the project: Optimize Frames per Second in pizza.html
 
 To make views/pizza.html render with a consistent frame-rate at 60fps when scrolling, following changes were made to views/js/main.js:
--   Changed the number of generated pizzas when the page load from 200 to 30
+-   Changed the number of generated pizzas when the page loads from 200 to 30
+    
     Before:
     ```
     for (var i = 0; i < 200; i++) {
     ...
     ```
+    
     After:
     ```
     for (var i = 0; i < 30; i++) {
@@ -150,4 +150,19 @@ To reduce time to resize pizzas is less than 5ms using the pizza size slider on 
         pizzas[i].style.width = newWidth + "%";
       }
     }
+    ```
+
+### Building the project and running Grunt
+-   Download project from GitHub
+-   Install Grunt's command line interface (CLI) globally
+    ```
+    npm install -g grunt-cli
+    ```
+-   Change to src directory inside the project's root directory, and run this command to install project dependencies
+    ```
+    npm install
+    ```
+-   Run Grunt with grunt command
+    ```
+    grunt
     ```
