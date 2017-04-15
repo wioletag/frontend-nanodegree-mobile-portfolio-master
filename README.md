@@ -40,6 +40,20 @@ To make views/pizza.html render with a consistent frame-rate at 60fps when scrol
     for (var i = 0; i < 30; i++) {
     ...
     ```
+-   Added requestAnimationFrame on updatePositions
+
+    Before:
+    ```
+    window.addEventListener('scroll', updatePositions);
+    ```
+    
+    After:
+    ```
+    window.addEventListener('scroll', function() {
+	window.requestAnimationFrame(updatePositions);
+    });
+    ```
+
 -   Updated updatePositions function
     * Stored items.length in l variable
     * Moved document.body.scrollTop/ 1250 out of the foor loop and stored in top variable
